@@ -7,8 +7,12 @@
 <title>The Industrial Lounge &mdash; Classic Industrial Music</title>
 
 <meta name="description" content="Underground broadcast of classic industrial music, EBM, darkwave, electronic and new wave. Listen live 24/7 from The Industrial Lounge.">
-<meta name="keywords" content="classic industrial music, industrial music, EBM, darkwave, electronic music, new wave, underground music, Mixcloud, DJ mix, 6400">
 <meta name="author" content="The Industrial Lounge">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+
+<link rel="canonical" href="https://www.theindustriallounge.com/">
+<link rel="icon" type="image/png" href="brand_2_final.png">
 
 <!-- Open Graph / Link Preview -->
 <meta property="og:title" content="The Industrial Lounge &mdash; Classic Industrial Music">
@@ -16,12 +20,15 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.theindustriallounge.com">
 <meta property="og:image" content="https://www.theindustriallounge.com/preview.png">
+<meta property="og:image:alt" content="The Industrial Lounge — Classic Industrial Music">
+<meta property="og:site_name" content="The Industrial Lounge">
 
 <!-- Twitter / X Preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Industrial Lounge &mdash; Classic Industrial Music">
 <meta name="twitter:description" content="Underground broadcast of classic industrial music, EBM, darkwave, electronic and new wave.">
 <meta name="twitter:image" content="https://www.theindustriallounge.com/preview.png">
+<meta name="twitter:image:alt" content="The Industrial Lounge — Classic Industrial Music">
 
 <style>
 * {
@@ -71,6 +78,13 @@ body {
     color: #ffffff;
 }
 
+.nav a:focus-visible,
+.live-button:focus-visible,
+.mix-link a:focus-visible {
+    outline: 2px solid #ff4444;
+    outline-offset: 4px;
+}
+
 /* Logo / Preview Image */
 .logo-wrap {
     width: 100%;
@@ -79,7 +93,7 @@ body {
 
 .logo-wrap img {
     width: 100%;
-    max-width: 640px;
+    max-width: 512px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -89,6 +103,7 @@ body {
 /* Subtitle */
 .subtitle {
     font-size: 14px;
+    font-weight: normal;
     letter-spacing: 3px;
     color: #999;
     margin: 0 0 18px 0;
@@ -160,10 +175,22 @@ body {
     }
 
     .nav {
-        gap: 18px;
+        gap: 10px;
         font-size: 10px;
         letter-spacing: 2px;
         margin-bottom: 22px;
+    }
+
+    .nav a,
+    .mix-link a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 4px;
+    }
+
+    .live-button {
+        min-height: 44px;
     }
 
     .subtitle {
@@ -188,42 +215,46 @@ body {
 
 <div class="page">
 
-    <nav class="nav" aria-label="Main navigation">
-        <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank">Live</a>
-        <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank">Mixes</a>
-        <a href="support.html">Support</a>
-    </nav>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" rel="noopener noreferrer">Live</a>
+            <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">Mixes</a>
+            <a href="support.html">Support</a>
+        </nav>
 
-    <!-- Main Logo / Preview Graphic -->
-    <div class="logo-wrap">
-        <img src="brand_2_clean.png" alt="The Industrial Lounge">
-    </div>
+        <!-- Main Logo / Preview Graphic -->
+        <div class="logo-wrap">
+            <img src="brand_2_clean.png" alt="The Industrial Lounge">
+        </div>
+    </header>
 
-    <!-- Subtitle -->
-    <div class="subtitle">Classic Industrial Music</div>
+    <main>
+        <!-- Subtitle -->
+        <h1 class="subtitle">Classic Industrial Music</h1>
 
-    <div class="about">
-        Underground industrial, EBM, darkwave, electronic and new wave broadcast from the edge of the dial.
-    </div>
+        <p class="about">
+            Underground industrial, EBM, darkwave, electronic and new wave broadcast from the edge of the dial.
+        </p>
 
-    <!-- Live Button -->
-    <div class="live-button-wrap">
-        <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" class="live-button">
-            &#128308; LIVE NOW
-        </a>
-    </div>
+        <!-- Live Button -->
+        <div class="live-button-wrap">
+            <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" rel="noopener noreferrer" class="live-button">
+                &#128308; LIVE NOW
+            </a>
+        </div>
 
-    <!-- Browse Mixes Link -->
-    <div class="mix-link">
-        <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank">
-            Browse Mixes
-        </a>
-    </div>
+        <!-- Browse Mixes Link -->
+        <div class="mix-link">
+            <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">
+                Browse Mixes
+            </a>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
         &copy; The Industrial Lounge
-    </div>
+    </footer>
 
 </div>
 

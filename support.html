@@ -8,6 +8,27 @@
 
 <meta name="description" content="Support The Industrial Lounge through merch and listener support.">
 <meta name="author" content="The Industrial Lounge">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+
+<link rel="canonical" href="https://www.theindustriallounge.com/support.html">
+<link rel="icon" type="image/png" href="brand_2_final.png">
+
+<!-- Open Graph / Link Preview -->
+<meta property="og:title" content="Support &mdash; The Industrial Lounge">
+<meta property="og:description" content="Support The Industrial Lounge through merch and listener support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.theindustriallounge.com/support.html">
+<meta property="og:image" content="https://www.theindustriallounge.com/preview.png">
+<meta property="og:image:alt" content="The Industrial Lounge — Classic Industrial Music">
+<meta property="og:site_name" content="The Industrial Lounge">
+
+<!-- Twitter / X Preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Support &mdash; The Industrial Lounge">
+<meta name="twitter:description" content="Support The Industrial Lounge through merch and listener support.">
+<meta name="twitter:image" content="https://www.theindustriallounge.com/preview.png">
+<meta name="twitter:image:alt" content="The Industrial Lounge — Classic Industrial Music">
 
 <style>
 * {
@@ -57,6 +78,11 @@ body {
     color: #ffffff;
 }
 
+.nav a:focus-visible {
+    outline: 2px solid #ff4444;
+    outline-offset: 4px;
+}
+
 .logo-wrap {
     width: 100%;
     margin: 0 auto 28px auto;
@@ -73,6 +99,7 @@ body {
 
 .subtitle {
     font-size: 14px;
+    font-weight: normal;
     letter-spacing: 3px;
     color: #999;
     margin: 0 0 18px 0;
@@ -122,10 +149,17 @@ body {
     }
 
     .nav {
-        gap: 18px;
+        gap: 10px;
         font-size: 10px;
         letter-spacing: 2px;
         margin-bottom: 22px;
+    }
+
+    .nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 4px;
     }
 
     .logo-wrap img {
@@ -148,29 +182,33 @@ body {
 
 <div class="page">
 
-    <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank">Mixes</a>
-        <a href="support.html" class="active">Support</a>
-    </nav>
+    <header>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">Mixes</a>
+            <a href="support.html" class="active" aria-current="page">Support</a>
+        </nav>
 
-    <div class="logo-wrap">
-        <img src="brand_2_clean.png" alt="The Industrial Lounge">
-    </div>
+        <div class="logo-wrap">
+            <img src="brand_2_clean.png" alt="The Industrial Lounge">
+        </div>
+    </header>
 
-    <div class="subtitle">Support The Signal</div>
+    <main>
+        <h1 class="subtitle">Support The Signal</h1>
 
-    <div class="support-copy">
-        Merch is being prepared through Printify. Shirts, hoodies, stickers and other support items will be available here once the shop is live.
-    </div>
+        <p class="support-copy">
+            Merch is being prepared through Printify. Shirts, hoodies, stickers and other support items will be available here once the shop is live.
+        </p>
 
-    <span class="support-button">Coming Soon</span>
+        <span class="support-button">Coming Soon</span>
 
-    <div class="note">Printify merch link pending</div>
+        <div class="note">Printify merch link pending</div>
+    </main>
 
-    <div class="footer">
+    <footer class="footer">
         &copy; The Industrial Lounge
-    </div>
+    </footer>
 
 </div>
 
