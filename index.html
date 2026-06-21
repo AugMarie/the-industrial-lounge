@@ -47,7 +47,7 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     padding: 30px 18px;
 }
@@ -55,34 +55,19 @@ body {
 .page {
     width: 100%;
     max-width: 760px;
-}
-
-/* Navigation */
-.nav {
+    min-height: calc(100vh - 60px);
     display: flex;
-    justify-content: center;
-    gap: 28px;
-    margin: 0 0 26px 0;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    flex-direction: column;
 }
 
-.nav a {
-    color: #666;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: #ffffff;
-}
-
-.nav a:focus-visible,
 .live-button:focus-visible,
 .mix-link a:focus-visible {
     outline: 2px solid #ff4444;
     outline-offset: 4px;
+}
+
+.site-content {
+    margin: auto 0;
 }
 
 /* Logo / Preview Image */
@@ -161,7 +146,7 @@ body {
 
 /* Footer */
 .footer {
-    margin-top: 48px;
+    padding-top: 48px;
     font-size: 10px;
     letter-spacing: 2px;
     color: #444;
@@ -174,14 +159,10 @@ body {
         padding: 24px 14px;
     }
 
-    .nav {
-        gap: 10px;
-        font-size: 10px;
-        letter-spacing: 2px;
-        margin-bottom: 22px;
+    .page {
+        min-height: calc(100vh - 48px);
     }
 
-    .nav a,
     .mix-link a {
         display: inline-flex;
         align-items: center;
@@ -205,8 +186,9 @@ body {
     }
 
     .footer {
-        margin-top: 38px;
+        padding-top: 38px;
     }
+
 }
 </style>
 </head>
@@ -215,41 +197,37 @@ body {
 
 <div class="page">
 
-    <header>
-        <nav class="nav" aria-label="Main navigation">
-            <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" rel="noopener noreferrer">Live</a>
-            <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">Mixes</a>
-            <a href="support.html">Support</a>
-        </nav>
+    <div class="site-content">
+        <header>
+            <!-- Main Logo / Preview Graphic -->
+            <div class="logo-wrap">
+                <img src="brand_2_clean.png" alt="The Industrial Lounge">
+            </div>
+        </header>
 
-        <!-- Main Logo / Preview Graphic -->
-        <div class="logo-wrap">
-            <img src="brand_2_clean.png" alt="The Industrial Lounge">
-        </div>
-    </header>
+        <main>
+            <!-- Subtitle -->
+            <h1 class="subtitle">Classic Industrial Music</h1>
 
-    <main>
-        <!-- Subtitle -->
-        <h1 class="subtitle">Classic Industrial Music</h1>
+            <p class="about">
+                Underground industrial, EBM, darkwave, electronic and new wave broadcast from the edge of the dial.
+            </p>
 
-        <p class="about">
-            Underground industrial, EBM, darkwave, electronic and new wave broadcast from the edge of the dial.
-        </p>
+            <!-- Live Button -->
+            <div class="live-button-wrap">
+                <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" rel="noopener noreferrer" class="live-button">
+                    &#128308; LIVE NOW
+                </a>
+            </div>
 
-        <!-- Live Button -->
-        <div class="live-button-wrap">
-            <a href="https://www.mixcloud.com/live/DJAapocalypse/" target="_blank" rel="noopener noreferrer" class="live-button">
-                &#128308; LIVE NOW
-            </a>
-        </div>
-
-        <!-- Browse Mixes Link -->
-        <div class="mix-link">
-            <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">
-                Browse Mixes
-            </a>
-        </div>
-    </main>
+            <!-- Browse Mixes Link -->
+            <div class="mix-link">
+                <a href="https://www.mixcloud.com/DJAapocalypse/" target="_blank" rel="noopener noreferrer">
+                    Browse Mixes
+                </a>
+            </div>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
