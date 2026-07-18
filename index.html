@@ -39,7 +39,7 @@ html, body {
     margin: 0;
     padding: 0;
     min-height: 100%;
-    background: #000;
+    background: #000 url("TIL_BG.png") center center / cover fixed no-repeat;
     color: #d8d8d8;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -49,13 +49,13 @@ body {
     justify-content: center;
     align-items: stretch;
     text-align: center;
-    padding: 30px 18px;
+    padding: 48px 32px;
 }
 
 .page {
     width: 100%;
-    max-width: 760px;
-    min-height: calc(100vh - 60px);
+    max-width: 1080px;
+    min-height: calc(100vh - 96px);
     display: flex;
     flex-direction: column;
 }
@@ -68,12 +68,20 @@ body {
 
 .site-content {
     margin: auto 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.75fr);
+    align-items: center;
+    gap: 72px;
+}
+
+.primary-column {
+    text-align: left;
 }
 
 /* Logo / Preview Image */
 .logo-wrap {
     width: 100%;
-    margin: 0 auto 28px auto;
+    margin: 0 0 40px 0;
 }
 
 .logo-wrap img {
@@ -81,7 +89,7 @@ body {
     max-width: 512px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0;
     opacity: 0.88;
 }
 
@@ -91,21 +99,21 @@ body {
     font-weight: normal;
     letter-spacing: 3px;
     color: #999;
-    margin: 0 0 18px 0;
+    margin: 0 0 24px 0;
     text-transform: uppercase;
 }
 
 .about {
     max-width: 520px;
-    margin: 0 auto 26px auto;
+    margin: 0 0 36px 0;
     color: #777;
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 /* Live Button */
 .live-button-wrap {
-    margin: 0 0 28px 0;
+    margin: 0 0 22px 0;
 }
 
 .live-button {
@@ -129,7 +137,7 @@ body {
 
 /* Browse Mixes Link */
 .mix-link {
-    margin-top: 22px;
+    margin-top: 0;
     font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -144,9 +152,74 @@ body {
     color: #ffffff;
 }
 
+/* Station Information */
+.station-panel {
+    padding: 36px 32px;
+    background: #070707;
+    border: 1px solid #222;
+    text-align: left;
+}
+
+.panel-heading {
+    margin: 0 0 28px 0;
+    color: #666;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.broadcast-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    color: #d8d8d8;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #aa0000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+.genres {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.genres li {
+    padding: 12px 0;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.genres li + li {
+    border-top: 1px solid #1a1a1a;
+}
+
+.location {
+    margin: 18px 0 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* Footer */
 .footer {
-    padding-top: 48px;
+    padding-top: 56px;
     font-size: 10px;
     letter-spacing: 2px;
     color: #444;
@@ -154,13 +227,31 @@ body {
 }
 
 /* Mobile adjustments */
-@media (max-width: 600px) {
+@media (max-width: 760px) {
     body {
-        padding: 24px 14px;
+        padding: 32px 18px;
     }
 
     .page {
-        min-height: calc(100vh - 48px);
+        max-width: 620px;
+        min-height: calc(100vh - 64px);
+    }
+
+    .site-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .primary-column {
+        text-align: center;
+    }
+
+    .logo-wrap {
+        margin: 0 auto 32px auto;
+    }
+
+    .logo-wrap img {
+        margin: 0 auto;
     }
 
     .mix-link a {
@@ -177,16 +268,36 @@ body {
     .subtitle {
         font-size: 11px;
         letter-spacing: 2px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     .about {
+        margin: 0 auto 30px auto;
         font-size: 12px;
-        margin-bottom: 22px;
+    }
+
+    .live-button-wrap {
+        margin-bottom: 20px;
+    }
+
+    .station-panel {
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+        padding: 30px 26px;
+        text-align: center;
+    }
+
+    .broadcast-status {
+        justify-content: center;
+    }
+
+    .panel-heading {
+        margin-bottom: 24px;
     }
 
     .footer {
-        padding-top: 38px;
+        padding-top: 44px;
     }
 
 }
@@ -198,14 +309,15 @@ body {
 <div class="page">
 
     <div class="site-content">
-        <header>
+        <div class="primary-column">
+            <header>
             <!-- Main Logo / Preview Graphic -->
             <div class="logo-wrap">
                 <img src="brand_2_clean.png" alt="The Industrial Lounge">
             </div>
-        </header>
+            </header>
 
-        <main>
+            <main>
             <!-- Subtitle -->
             <h1 class="subtitle">Classic Industrial Music</h1>
 
@@ -226,7 +338,26 @@ body {
                     Browse Mixes
                 </a>
             </div>
-        </main>
+            </main>
+        </div>
+
+        <aside class="station-panel" aria-labelledby="station-info-heading">
+            <h2 class="panel-heading" id="station-info-heading">Station Information</h2>
+
+            <div class="broadcast-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>24/7 Broadcast</span>
+            </div>
+
+            <ul class="genres" aria-label="Genres">
+                <li>Industrial</li>
+                <li>EBM</li>
+                <li>Darkwave</li>
+                <li>New Wave</li>
+            </ul>
+
+            <p class="location">Seattle, Washington</p>
+        </aside>
     </div>
 
     <!-- Footer -->
